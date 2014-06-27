@@ -33,7 +33,7 @@ public class CgReportQueryParamUtil extends  org.jeecgframework.web.cgform.util.
 		String filedType = (String) item.get(CgReportConstant.ITEM_FIELDTYPE);
 		if("single".equals(queryMode)){
 			//单条件组装方式
-			String value =request.getParameter(filedName);
+			String value =request.getParameter(filedName.toLowerCase());   --修改在线生成查询没有结果的问题
 			try {
 				if(StringUtil.isEmpty(value)){
 					return;
